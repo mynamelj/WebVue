@@ -121,7 +121,7 @@ export const settingMenu = (rid: string, mids: string) => {
 
 // --------------------- 用户模块 Start ---------------------
 export const getUsers = (obj: {}) => {
-    return instance.post("/api/User/GetUsers", obj)
+    return instance.post("/api/User/GetUsers", obj) 
 }
 export const addUser = (req: {}) => {
     return instance.post("/api/User/Add", req)

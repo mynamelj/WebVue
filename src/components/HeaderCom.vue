@@ -33,7 +33,7 @@
                     <template #dropdown>
                         <el-dropdown-menu>
                             <el-dropdown-item>我的主页</el-dropdown-item>
-                            <el-dropdown-item>退出</el-dropdown-item>
+                            <el-dropdown-item @click="logOut">退出</el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>
@@ -91,6 +91,11 @@ const handleClose = (index: string) => {
         tags: tags.value
     })
 } 
+
+const logOut = () => {
+    store().reset()
+    router.push({ path: "/login" })
+}
 </script>
 <style lang="scss" scoped>
 .el-header {
