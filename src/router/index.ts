@@ -22,12 +22,12 @@ const router = createRouter({
             component: () => import("../views/index/RootPage.vue"),
             children: [
                 {
-                    name: "desktop",
-                    path: "/desktop",
+                    name: "主页",
+                    path: "/",
                     component: () => import("../views/index/Desktop.vue")
                 },
                 {
-                    name: "person",
+                    name: "个人中心",
                     path: "/person",
                     component: () => import("../views/index/PersonPage.vue")
                 },

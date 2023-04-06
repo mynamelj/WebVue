@@ -5,12 +5,16 @@
             <el-menu :collapse="isCollapse" router :unique-opened="true"
                 style="height: 100vh;background-color:blanchedalmond;" @select="handleSelect"
                 :default-active="router.currentRoute.value.path">
+                <el-menu-item index="2">
+                    <IconCom icon="house"></IconCom>
+                    <template #title>Navigator Two</template>
+                </el-menu-item>
                 <el-sub-menu index="/desktop">
                     <template #title>
                         <IconCom icon="house"></IconCom>
                         <span>我的主页</span>
                     </template>
-                    <el-menu-item index="/desktop">
+                    <el-menu-item index="/">
                         <IconCom icon="wallet"></IconCom>
                         <span>工作台</span>
                     </el-menu-item>
@@ -19,7 +23,7 @@
                         <span>个人信息</span>
                     </el-menu-item>
                 </el-sub-menu>
-                <TreeMenu :list="list"></TreeMenu>
+                <!-- <TreeMenu :list="list"></TreeMenu> -->
             </el-menu>
         </el-aside>
         <el-container>

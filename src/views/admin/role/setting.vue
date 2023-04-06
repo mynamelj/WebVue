@@ -50,7 +50,6 @@ const save = async () => {
     // 组合参数 
     let mids = uniqueArr.map(item => item.Id).join(',')
     console.log(props.rids, mids)
-    // Todo:需要测试一下
     let res = (await settingMenu(props.rids!, mids) as any) as boolean
     if (res) {
         emits("settingSuccess")

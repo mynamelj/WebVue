@@ -58,9 +58,9 @@ import { onMounted, ref } from 'vue';
 import IconCom from '../components/IconCom.vue';
 import router from '../router';
 import store from '../store/index';
-import { handleSelect, tagClick } from '../tool';
-const circleUrl = ref('/01.jpeg')
-const NickName = ref("Rise")
+import { FormatToken, handleSelect, tagClick } from '../tool';
+const circleUrl = ref(FormatToken(store().token)?.Image)
+const NickName = ref(FormatToken(store().token)?.NickName)
 // console.log(`折叠菜单全局状态的值：${store().isCollapse}`)
 const ChangeisCollapse = () => {
     store().$patch({
@@ -90,7 +90,7 @@ const handleClose = (index: string) => {
     store().$patch({
         tags: tags.value
     })
-} 
+}
 
 const logOut = () => {
     store().reset()
@@ -120,7 +120,6 @@ const logOut = () => {
 .dropdown {
     float: right;
     height: 50px;
-    line-height: 70px;
 }
 
 .el-dropdown {

@@ -44,7 +44,7 @@
                       </template>
                   </el-table-column>
               </el-table>
-              <el-pagination style="margin-top: 10px;" background layout="prev, pager, next" :total="1000" />
+              <el-pagination style="margin-top: 10px;" background layout="prev, pager, next" :total="total" />
           </el-col>
       </el-row>
       <add :isShow="isShow" :info="info" @closeAdd="closeAdd" @success="success"></add>
