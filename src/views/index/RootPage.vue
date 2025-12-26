@@ -2,10 +2,17 @@
     <!-- 需要内嵌的页面都放在这里 -->
     <el-container>
         <el-aside style="width:inherit;">
-            <el-menu :collapse="isCollapse" router :unique-opened="true"
-                style="height: 100vh;background-color:blanchedalmond;" @select="handleSelect"
+            <el-menu 
+                :collapse="isCollapse" 
+                router 
+                :unique-opened="true"
+                style="height: 100vh; border-right: none;" 
+                background-color="#304156" 
+                text-color="#bfcbd9" 
+                active-text-color="#409EFF"
+                @select="handleSelect"
                 :default-active="router.currentRoute.value.path">
-                <el-sub-menu index="/desktop">
+                            <el-sub-menu index="/desktop">
                     <template #title>
                         <IconCom icon="house"></IconCom>
                         <span>我的主页</span>
@@ -44,3 +51,6 @@ import store from '../../store/index';
 const list = computed(() => store().UserMenus)
 const isCollapse = computed(() => useStore().isCollapse)
 </script>
+<style scoped>
+
+</style>

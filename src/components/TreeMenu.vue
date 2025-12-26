@@ -1,5 +1,5 @@
 <template >
-    <template v-for="item in list" :key="item.index">
+    <template v-for="item in list" :key="item.Index">
         <el-menu-item :index=item.Index v-if="!item.Children">
             <IconCom icon="notebook"></IconCom>
             <template #title><span>{{ item.Name }}</span></template>
